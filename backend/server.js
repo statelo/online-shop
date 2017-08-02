@@ -1,24 +1,30 @@
 const express = require('express');
-const app = express();
-const authentication = require('./routes/authentication');
 const MongoClient = require('mongodb').MongoClient;
+const favicon = require('serve-favicon');
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const path = require('path');
+const passport = require('passport');
 
-let db;
+const app = express();
+const mongo = require('./database');
 
-MongoClient.connect('mongodb://localhost:27017/test', (err, connection) => {
-	if(err) { console.log(err); }
-	db = connection
-})
+require('./passport');
 
-app.use('/authentication', authentication);
-app.get('/api/name', (req, res, next) => {
-	db.collection('users')
-		.find()
-		.toArray((err, users) => {
-			res.json(users);
-		})
-})
+// Set routers
+const authentication = require('./routes/authentication');
 
-app.listen(3001, () => {
-	console.log("Server listening on port 3001");
+// Set middlewares
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.use(favicon(path.join(__dirname, '../frontend/build/favicon.ico')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(session({ secret: "Pushok", resave: false, saveUninitialized: false }))
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use('/auth', authentication)
+
+app.listen(4001, () => {
+	console.log("Server listening on port 4001");
 })

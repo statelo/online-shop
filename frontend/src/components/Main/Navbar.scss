@@ -1,0 +1,29 @@
+.container {
+  height: 100vh;
+
+  .navbar {
+    border-radius: 0px;
+  }
+
+  .navbar-brand,
+  .navbar-nav li a {
+    line-height: 70px;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+}
+
+.navbar-inverse .navbar-brand {
+  color: #1abc9c;
+}
+
+.navbar-inverse {
+  .navbar-nav {
+    li {
+      a {
+        color: #1abc9c;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
