@@ -1,24 +1,25 @@
-.authentication {
-	background-color: #1abc9c;
+.Registration-authentication {
+	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../../images/background-1.jpg');
+	background-size: cover;
 	height: 100vh;
 	color: #2f4c7a;
 	padding-top: 100px;
 	min-width: 540px;
 
 	.header {
-		background-color: #1abc9c;
+		background-color: transparent;
 		text-align: center;
 		margin: 0 auto;
 		width: 220px;
 
 		.home-link {
 			text-decoration: none;
-			color: #2f4c7a;
+			color: white;
 			width: 95px;
 			height: 25px;
 
 			:hover {
-				color: white;
+				color: #adb5bd;
 			}
 
 			h1 {

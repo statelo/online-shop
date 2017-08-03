@@ -4,6 +4,8 @@ const passport = require('passport');
 
 router.get('/', (req, res, next) => {
 	res.json({
+		session: req.session,
+		user: req.user,
 		authenticated: req.isAuthenticated()
 	})
 })

@@ -1,15 +1,15 @@
 import { 
 	LOGIN,
 	LOGIN_SUCCESS,
+	LOGIN_FAILURE,
 	LOGOUT,
 	LOGOUT_SUCCESS
 } from '../actions/authentication';
 
 const initialState = {
-	login: {
-		status: "INIT"
-	},
-	isLoggedIn: false
+	status: "INIT",
+	isLoggedIn: false,
+	user: ''
 }
 
 export const authentication = (state=initialState, action) => {
@@ -17,36 +17,31 @@ export const authentication = (state=initialState, action) => {
 		case LOGIN:
 			return {
 				...state,
-				login: {
-					...state.login,
-					status: "WAIT"
-				}
+				status: "WAIT"
 			}
 		case LOGIN_SUCCESS:
 			return {
 				...state,
-				login: {
-					...state.login,
-					status: "SUCCESS"
-				},
+				status: "SUCCESS",
 				isLoggedIn: action.login,
+				user: action.user
+			}
+		case LOGIN_FAILURE:
+			return {
+				...state,
+				status: "FAILURE"
 			}
 		case LOGOUT:
 			return {
 				...state,
-				login: {
-					...state.login,
-					status: "WAIT"
-				}
+				status: "WAIT"
 			}
 		case LOGOUT_SUCCESS:
 			return {
 				...state,
-				login: {
-					...state.login,
-					status: "INIT"
-				},
-				isLoggedIn: action.logout
+				status: "INIT",
+				isLoggedIn: action.logout,
+				user: ''
 			}
 		default:
 			return state;

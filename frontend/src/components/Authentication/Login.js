@@ -85,10 +85,18 @@ class Login extends Component {
 			</div>
 		)
 
+
+		const failureAlert = (
+      <div className="what">
+        <strong>INVALID USERNAME OR PASSWORD</strong>
+      </div>
+    )
+
 		return(
-			<div className="authentication">
+			<div className="Login-authentication">
+				{this.props.status === "FAILURE" && failureAlert}
 				<div className="header">
-					<Link to="/" className="home-link"><h1>iProduction</h1></Link>
+					<a href="/" className="home-link"><h1>iProduction</h1></a>
 				</div>
 
 				{loginView}

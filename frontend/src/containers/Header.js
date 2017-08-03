@@ -23,6 +23,7 @@ class Header extends Component {
 					isLoggedIn={this.props.isLoggedIn}
 					handleLogout={this.handleLogout}
 					history={this.props.history}
+					user={this.props.user}
 				/>
 			</div>
 		)
@@ -31,7 +32,8 @@ class Header extends Component {
 
 const mapStateToProps = state => {
 	return {
-		isLoggedIn: state.isLoggedIn
+		isLoggedIn: state.isLoggedIn,
+		user: state.user
 	}
 }
 

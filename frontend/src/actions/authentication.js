@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const LOGIN = 'LOGIN';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 export const LOGOUT = 'LOGOUT';
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
 
@@ -33,7 +34,9 @@ export function requestLogin(username, password) {
 		dispatch(login());
 
 		return axios.post('/auth/login', {username, password}).then(res => {
-			dispatch(successLogin(res.data.authenticated));
+			dispatch(successLogin(res.data.authenticated, res.data.user.first_name));
+		}).catch(err => {
+			dispatch(failureLogin())
 		})
 	}
 }
@@ -44,9 +47,16 @@ function login() {
 	}
 }
 
-function successLogin(login) {
+function successLogin(login, user) {
 	return {
 		type: LOGIN_SUCCESS,
-		login
+		login,
+		user
+	}
+}
+
+function failureLogin() {
+	return {
+		type: LOGIN_FAILURE
 	}
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -19,8 +20,13 @@ const loggerMiddleware = createLogger();
 const store = createStore(authentication, persistedState, applyMiddleware(loggerMiddleware, thunkMiddleware));
 
 store.subscribe(throttle(() => {
-	saveState(store.getState());
+	saveState({
+		isLoggedIn: store.getState().isLoggedIn,
+		user: store.getState().user
+	});
 }, 1000))
+
+console.log(store.getState())
 
 ReactDOM.render(
 	<Provider store={store}>

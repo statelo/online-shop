@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './Registration.css';
 
 class Registration extends Component {
@@ -55,9 +54,9 @@ class Registration extends Component {
 		)
 
 		return(
-			<div className="authentication">
+			<div className="Registration-authentication">
 				<div className="header">
-					<Link to="/" className="home-link"><h1>iProduction</h1></Link>
+					<a href="/" className="home-link"><h1>iProduction</h1></a>
 				</div>
 
 				{registerView}

@@ -16,7 +16,7 @@ class Authentication extends React.Component {
 			if(this.props.status === "SUCCESS") {
 				this.props.history.push('/');
 			} else {
-				this.props.history.push('/login');
+				this.props.history.push('/auth/login')
 			}
 		});
 	}
@@ -48,7 +48,7 @@ class Authentication extends React.Component {
 
 const mapStateToProps = state => {
 	return {
-		status: state.login.status
+		status: state.status
 	}
 }
 
