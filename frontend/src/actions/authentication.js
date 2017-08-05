@@ -1,10 +1,47 @@
 import axios from 'axios';
+import {
+	LOGIN,
+	LOGIN_SUCCESS,
+	LOGIN_FAILURE,
+	LOGOUT,
+	LOGOUT_SUCCESS,
+	SIGNUP,
+	SIGNUP_SUCCESS,
+	SIGNUP_FAILURE
+} from './types/authentication';
 
-export const LOGIN = 'LOGIN';
-export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
-export const LOGIN_FAILURE = 'LOGIN_FAILURE';
-export const LOGOUT = 'LOGOUT';
-export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+export function requestSignup(username, password, password_repeat, first_name, last_name) {
+	return (dispatch) => {
+		dispatch(signup());
+
+		return axios.post('/auth/signup', {username, password, password_repeat, first_name, last_name}).then(res => {
+			dispatch(successSignup(res.data.authenticated, res.data.user.first_name))
+		}).catch(err => {
+			dispatch(failureSignup())
+			dispatch(login())
+		})
+	}
+}
+
+function signup() {
+	return {
+		type: SIGNUP
+	}
+}
+
+function successSignup(signup, user) {
+	return {
+		type: SIGNUP_SUCCESS,
+		signup,
+		user
+	}
+}
+
+function failureSignup() {
+	return {
+		type: SIGNUP_FAILURE
+	}
+}
 
 export function requestLogout() {
 	return (dispatch) => {
@@ -37,6 +74,7 @@ export function requestLogin(username, password) {
 			dispatch(successLogin(res.data.authenticated, res.data.user.first_name));
 		}).catch(err => {
 			dispatch(failureLogin())
+			dispatch(signup())
 		})
 	}
 }

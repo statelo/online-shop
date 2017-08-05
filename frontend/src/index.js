@@ -12,7 +12,7 @@ import { authentication } from './reducers/authentication';
 import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
 import { loadState, saveState } from './localStorage';
-import throttle from 'lodash/throttle'
+import throttle from 'lodash/throttle';
 
 const persistedState = loadState()
 const loggerMiddleware = createLogger();

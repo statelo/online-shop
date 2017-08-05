@@ -23,4 +23,8 @@ router.get('/logout', (req, res, next) => {
 	})
 })
 
+router.post('/signup', passport.authenticate('local-registration'), (req, res) => {
+	res.redirect('/auth');
+})
+
 module.exports = router;

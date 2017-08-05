@@ -5,6 +5,27 @@
   color: #2f4c7a;
   padding-top: 100px;
   min-width: 540px; }
+
+@keyframes alert {
+  from {
+    top: -100px; }
+  to {
+    top: 20px; } }
+  .Registration-authentication .what {
+    position: absolute;
+    text-align: center;
+    top: -100px;
+    left: 40%;
+    right: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #d9534f;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    animation-name: alert;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
   .Registration-authentication .header {
     background-color: transparent;
     text-align: center;
@@ -32,11 +53,12 @@
       width: 80%;
       height: 40%;
       margin: 0 auto;
-      padding: 20px 10% 0; }
+      padding: 10px 10% 0; }
       .Registration-authentication .main .input-box label {
         width: 100%;
         font-size: 15px;
         min-width: 20%;
+        letter-spacing: 0.05em;
         float: left;
         clear: both; }
       .Registration-authentication .main .input-box input {
@@ -47,7 +69,7 @@
     .Registration-authentication .main .authenticate {
       text-align: center;
       margin-top: 25px; }
-      .Registration-authentication .main .authenticate input {
+      .Registration-authentication .main .authenticate a {
         border-radius: 0px;
         width: 30%;
         height: 40%;

@@ -4,17 +4,44 @@ const mongo = require('./database');
 const ObjectID = require('mongodb').ObjectID;
 
 passport.use(new LocalStrategy(authentication));
+passport.use('local-registration', new LocalStrategy({passReqToCallback: true}, registration));
 
 function authentication(email, password, done) {
 	mongo.db.collection('users')
 		.findOne({ email: email })
 		.then((user) => {
 			if(!user || user.password !== password) {
-				done(null, false, {message: "Invalid Credentials"})
+				return done(null, false, { message: "Invalid Credentials" })
 			}
 
 			done(null, user)
 		}, done)
+}
+
+function registration(req, email, password, done) {
+	mongo.db.collection('users')
+		.findOne({ email: email })
+		.then((user) => {
+			if(user) {
+				return done(null, false, { message: "User with this email already been created" })
+			} else if(password !== req.body.password_repeat) {
+				return done(null, false, { message: "Passwords don`t match" })
+			}
+
+			const newUser = {
+				first_name: req.body.first_name,
+				last_name: req.body.last_name,
+				email: email,
+				password: password,
+				is_admin: 0
+			}
+
+			mongo.db.collection('users')
+				.insertOne(newUser)
+				.then(() => {
+					done(null, newUser)
+				})
+		})
 }
 
 passport.serializeUser(function(user, done) {

@@ -2,31 +2,93 @@ import React, { Component } from 'react';
 import './Registration.css';
 
 class Registration extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			username: '',
+			password: '',
+			password_repeat: '',
+			first_name: '',
+			last_name: ''
+		}
+
+		this.handleChange = this.handleChange.bind(this);
+		this.onSignup = this.onSignup.bind(this);
+	}
+
+	onSignup() {
+		let username = this.state.username;
+		let password = this.state.password;
+		let password_repeat = this.state.password_repeat;
+		let first_name = this.state.first_name;
+		let last_name = this.state.last_name;
+
+		this.props.successSignup(username, password, password_repeat, first_name, last_name);
+	}
+
+	handleChange(e) {
+		let nextState = {};
+		nextState[e.target.name] = e.target.value;
+		this.setState(nextState);
+	}
+
 	render() {
 		const inputBoxes = (
-			<form action="/login" method="post">
+			<div>
 				<div className="input-box">
-					<label>Enter your E-Mail</label>
+					<label>FIRST NAME:</label>
 					<input
-						className="email"
 						type="text"
-						name="username"
+						name="first_name"
+						value={this.state.first_name}
+						onChange={this.handleChange}
 					/>
 				</div>
 
 				<div className="input-box">
-					<label>Enter your password</label>
+					<label>LAST NAME:</label>
 					<input
-						className="password"
+						type="text"
+						name="last_name"
+						value={this.state.last_name}
+						onChange={this.handleChange}
+					/>
+				</div>
+
+				<div className="input-box">
+					<label>EMAIL:</label>
+					<input
+						type="text"
+						name="username"
+						value={this.state.username}
+						onChange={this.handleChange}
+					/>
+				</div>
+
+				<div className="input-box">
+					<label>PASSWORD:</label>
+					<input
 						type="password"
 						name="password"
+						value={this.state.password}
+						onChange={this.handleChange}
+					/>
+				</div>
+
+				<div className="input-box">
+					<label>REPEAT PASSWORD:</label>
+					<input
+						type="password"
+						name="password_repeat"
+						value={this.state.password_repeat}
+						onChange={this.handleChange}
 					/>
 				</div>
 
 				<div className="authenticate">
-					<input type="submit" className="btn btn-primary" value="SIGN UP"/>
+					<a className="btn btn-primary" onClick={this.onSignup}>SIGN UP</a>
 				</div>
-			</form>
+			</div>
 		)
 
 		const socialButtons = (
@@ -53,8 +115,15 @@ class Registration extends Component {
 			</div>
 		)
 
+    const failureAlert = (
+      <div className="what">
+        <strong>USER EXIST OR PASSWORDS DO NOT MATCH</strong>
+      </div>
+    )
+
 		return(
 			<div className="Registration-authentication">
+				{this.props.signup_status === "FAILURE" && failureAlert}
 				<div className="header">
 					<a href="/" className="home-link"><h1>iProduction</h1></a>
 				</div>

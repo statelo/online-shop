@@ -30,9 +30,8 @@ class Login extends Component {
 		const inputBoxes = (
 			<div>
 				<div className="input-box">
-					<label>Enter your E-Mail</label>
+					<label>EMAIL:</label>
 					<input
-						className="email"
 						type="text"
 						name="username"
 						value={this.state.username}
@@ -41,9 +40,8 @@ class Login extends Component {
 				</div>
 
 				<div className="input-box">
-					<label>Enter your password</label>
+					<label>PASSWORD:</label>
 					<input
-						className="password"
 						type="password"
 						name="password"
 						value={this.state.password}
@@ -85,7 +83,6 @@ class Login extends Component {
 			</div>
 		)
 
-
 		const failureAlert = (
       <div className="what">
         <strong>INVALID USERNAME OR PASSWORD</strong>
@@ -94,7 +91,7 @@ class Login extends Component {
 
 		return(
 			<div className="Login-authentication">
-				{this.props.status === "FAILURE" && failureAlert}
+				{this.props.login_status === "FAILURE" && failureAlert}
 				<div className="header">
 					<a href="/" className="home-link"><h1>iProduction</h1></a>
 				</div>
