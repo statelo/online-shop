@@ -2,6 +2,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const mongo = require('./database');
 const ObjectID = require('mongodb').ObjectID;
+const bcrypt = require('bcrypt-nodejs');
 
 passport.use(new LocalStrategy(authentication));
 passport.use('local-registration', new LocalStrategy({passReqToCallback: true}, registration));
@@ -10,7 +11,7 @@ function authentication(email, password, done) {
 	mongo.db.collection('users')
 		.findOne({ email: email })
 		.then((user) => {
-			if(!user || user.password !== password) {
+			if(!user || !bcrypt.compareSync(password, user.password)) {
 				return done(null, false, { message: "Invalid Credentials" })
 			}
 
@@ -32,7 +33,7 @@ function registration(req, email, password, done) {
 				first_name: req.body.first_name,
 				last_name: req.body.last_name,
 				email: email,
-				password: password,
+				password: bcrypt.hashSync(password),
 				is_admin: 0
 			}
 
