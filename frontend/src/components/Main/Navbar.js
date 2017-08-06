@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import './Navbar.scss';
 import firstBackground from '../../images/background-1.jpg';
 import secondBackground from '../../images/background-2.jpg';
 import thirdBackground from '../../images/background-3.jpg';
