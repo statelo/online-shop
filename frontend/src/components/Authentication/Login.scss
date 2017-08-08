@@ -152,27 +152,45 @@
 
 			.facebook {
 				background-color: #3b5998;
-			}
-
-			.linkedin {
-				background-color: #0077B5;
-			}
-
-			.twitter {
-				background-color: #00aced;
-			}
-
-			button {
-				display: inline;
 				width: 160px;
 				height: 60px;
 				border: none;
 				margin: 0 5px 0 5px;
+				padding: 15px;
 				font-size: 20px;
 				font-weight: 400;
 
 				i {
-					float: left;
+					font-size: 25px;
+				}
+			}
+
+			.linkedin {
+				background-color: #0077B5;
+				width: 160px;
+				height: 60px;
+				border: none;
+				margin: 0 5px 0 5px;
+				padding: 15px;
+				font-size: 20px;
+				font-weight: 400;
+
+				i {
+					font-size: 25px;
+				}
+			}
+
+			.twitter {
+				background-color: #00aced;
+				width: 160px;
+				height: 60px;
+				border: none;
+				margin: 0 5px 0 5px;
+				padding: 15px;
+				font-size: 20px;
+				font-weight: 400;
+
+				i {
 					font-size: 25px;
 				}
 			}

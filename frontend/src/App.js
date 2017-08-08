@@ -12,8 +12,8 @@ class App extends Component {
             exact path='/'
             component={Header}
           />
-	        <Route 
-            path='/auth' 
+	        <Route
+            path='/auth'
             component={Authentication}
           />
       	</Switch>

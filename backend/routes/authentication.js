@@ -4,7 +4,6 @@ const passport = require('passport');
 
 router.get('/', (req, res, next) => {
 	res.json({
-		session: req.session,
 		user: req.user,
 		authenticated: req.isAuthenticated()
 	})
@@ -26,5 +25,14 @@ router.get('/logout', (req, res, next) => {
 router.post('/signup', passport.authenticate('local-registration'), (req, res) => {
 	res.redirect('/auth');
 })
+
+router.get('/login/facebook',
+  passport.authenticate('facebook'));
+
+router.get('/login/facebook/callback',
+  passport.authenticate('facebook', { failureRedirect: '/auth/login' }),
+  function(req, res) {
+    res.redirect('/');
+  });
 
 module.exports = router;

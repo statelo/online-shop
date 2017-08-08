@@ -2,7 +2,11 @@ import React from 'react';
 import { Login, Registration } from '../components';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { requestLogin, requestSignup } from '../actions/authentication';
+import { 
+	requestLogin,
+	requestSignup,
+	requestFacebookLogin
+} from '../actions/authentication';
 
 class Authentication extends React.Component {
 	constructor(props) {
@@ -38,6 +42,7 @@ class Authentication extends React.Component {
 		  	<Login
 		  		login_status={this.props.login_status}
 		  		successLogin={this.successLogin}
+		  		facebookLogin={this.props.facebookLogin}
 		  	/>
   		)
   	}
@@ -80,6 +85,9 @@ const mapDispatchToProps = dispatch => {
 		},
 		successSignup: (username, password, password_repeat, first_name, last_name) => {
 			return dispatch(requestSignup(username, password, password_repeat, first_name, last_name));
+		},
+		facebookLogin: () => {
+			return dispatch(requestFacebookLogin());
 		}
 	}
 }

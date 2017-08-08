@@ -6,6 +6,16 @@ import secondBackground from '../../images/background-2.jpg';
 import thirdBackground from '../../images/background-3.jpg';
 
 class Navbar extends React.Component {
+	componentDidMount() {
+		const { user } = this.props;
+
+		if(user) {
+			return
+		} else {
+			this.props.facebookLogin()
+		}
+	}
+
 	render() {
  		const logoutLink = (
  			<ul className="nav navbar-nav navbar-right">

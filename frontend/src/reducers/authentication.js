@@ -6,7 +6,8 @@ import {
 	LOGOUT_SUCCESS,
 	SIGNUP,
 	SIGNUP_SUCCESS,
-	SIGNUP_FAILURE
+	SIGNUP_FAILURE,
+	FACEBOOK_LOGIN
 } from '../actions/types/authentication';
 
 const initialState = {
@@ -44,6 +45,12 @@ export const authentication = (state=initialState, action) => {
 			return {
 				...state,
 				login_status: "SUCCESS",
+				isLoggedIn: action.login,
+				user: action.user
+			}
+		case FACEBOOK_LOGIN:
+			return {
+				...state,
 				isLoggedIn: action.login,
 				user: action.user
 			}
