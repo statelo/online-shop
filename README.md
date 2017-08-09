@@ -10,7 +10,7 @@ project. You can read about core technologies, project structure
 and installation processes in the next sections.
 
 **Note: This instructions must completely work on UNIX (macOS, Linux). Instructions
-for Windows OS will be applied soon**
+for Windows will be applied soon.**
 
 ## Technologies Used
 
@@ -68,7 +68,7 @@ online-shop/
       reducers
 ```
 
-**Note: Front-End folder was ejected with `npm run eject` command. Check out create-react-app repository**
+**Note: Front-End folder was ejected with `npm run eject` command. Check out create-react-app repository.**
 
 ## Getting Started
 
@@ -105,7 +105,7 @@ servers in one time. Check out this [Using create-react-app with a server](https
 	npm start
 	```
 
-**Note: You must be in Back-End Folder**
+**Note: You must be in Back-End Folder.**
 
 ## Thank You
 
