@@ -101,9 +101,7 @@ This project using [concurrently](https://github.com/kimmobrunfeldt/concurrently
 servers in one time. Check out this [Using create-react-app with a server](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/) for more information.
 
 5. Run Front-End and Back-End servers.
-	```sh
-	npm start
-	```
+	`npm start`
 
 **Note: You must be in Back-End Folder.**
 
