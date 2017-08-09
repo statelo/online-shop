@@ -74,10 +74,12 @@ To run this project on your local machine you need:
 	- Node.js ^6.8.1
 	- MongoDB ^3.4.6
 	- npm ^3.10.8
+
 2. Clone repository from GitHub.
 	```sh
 	git clone https://github.com/statelo/online-shop.git
 	```
+
 3. Install dependencies in Front-End folder.
 	```sh
 	cd online-shop
@@ -85,11 +87,13 @@ To run this project on your local machine you need:
 	npm install OR yarn install
 	cd ..
 	```
+
 4. Install dependencies in Back-End folder.
 	```sh
 	cd backend
 	npm install OR yarn install
 	```
+	
 This project using [concurrently](https://github.com/kimmobrunfeldt/concurrently) to run Back-End and Front-End
 servers in one time. Check out this [Using create-react-app with a server](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/) for more information.
 
