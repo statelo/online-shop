@@ -88,8 +88,8 @@ To run this project on your local machine you need:
 This project using [concurrently](https://github.com/kimmobrunfeldt/concurrently) to run Back-End and Front-End
 servers in one time. Check out this [Using create-react-app with a server](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/) for more information.
 
-5. Run Front-End and Back-End servers.
-	Run `npm start` in Back-End folder.
+5. Run Front-End and Back-End servers.<br>
+Run `npm start` in Back-End folder.
 
 
 
