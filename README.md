@@ -59,7 +59,12 @@ online-shop/
     config
     public
     scripts
-    src
+    src/
+    	actions
+    	components
+    	containers
+    	images
+    	reducers
 ```
 
 ## Getting Started
