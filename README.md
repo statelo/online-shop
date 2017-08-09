@@ -3,11 +3,11 @@
 This project is still in development mode. Online shop is a simple
 project where some list of clothes will be displayed and some add to 
 basket, buy function, delete from basket functions will be implemented.
-In this project were used 2 main technologies: **React.js for Front-End** and
-**Node.js for Back-End**. Online shop project was developed for personal use. This site
+In this project were used 3 main technologies: **React.js for Front-End** and
+**Node.js, MongoDB for Back-End**. Online shop project was developed for personal use. This site
 has not been deployed, but you can download and try out this
-project. You can read about [core technologies](#Technologies Used), project structure 
-and installation processes in the next section.
+project. You can read about core technologies, project structure 
+and installation processes in the next sections.
 
 ## Technologies Used
 
@@ -45,10 +45,26 @@ Following technologies were used for this project:
 
 This project was splitted on 2 folders: **online-shop/backend** and **online-shop/frontend**. 
 Frontend folder was created with **create-react-app** project. Check link in technologies
-section. Backend folder Project structure can be described as following:
+section. Backend folder just using **server.js** as main file. 
+
+**Note: Front-End folder was ejected with `npm run eject` command**
+
+Project structure can be described as following:
 
 ```
 online-shop/
-	backend
-	frontend
+  backend/
+    routes
+  frontend/
+    config
+    public
+    scripts
+    src
 ```
+
+## Getting Started
+
+To run this project on your local machine you need:
+> Node.js ^6.8.1
+>	MongoDB ^3.4.6
+> npm ^3.10.8
