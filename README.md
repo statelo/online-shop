@@ -93,14 +93,18 @@ To run this project on your local machine you need:
 	cd backend
 	npm install OR yarn install
 	```
-	
+
 This project using [concurrently](https://github.com/kimmobrunfeldt/concurrently) to run Back-End and Front-End
 servers in one time. Check out this [Using create-react-app with a server](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/) for more information.
 
-5. Run Front-End and Back-End servers (You must be in Back-End Folder).
+5. Run Front-End and Back-End servers (**NOTE: You must be in Back-End Folder**).
 	```sh
 	npm start
 	```
+
+### Thank You
+
+If you have any questions you can email me to **statelo1992@gmail.com**
 
 
 
