@@ -7,7 +7,7 @@ import {
 	SIGNUP,
 	SIGNUP_SUCCESS,
 	SIGNUP_FAILURE,
-	FACEBOOK_LOGIN
+	LOGIN_SOCIAL
 } from '../actions/types/authentication';
 
 const initialState = {
@@ -48,7 +48,7 @@ export const authentication = (state=initialState, action) => {
 				isLoggedIn: action.login,
 				user: action.user
 			}
-		case FACEBOOK_LOGIN:
+		case LOGIN_SOCIAL:
 			return {
 				...state,
 				isLoggedIn: action.login,

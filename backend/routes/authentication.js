@@ -35,4 +35,24 @@ router.get('/login/facebook/callback',
     res.redirect('/');
   });
 
+router.get('/login/twitter',
+  passport.authenticate('twitter'));
+
+router.get('/login/twitter/callback',
+  passport.authenticate('twitter', { failureRedirect: '/auth/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
+
+router.get('/login/google',
+  passport.authenticate('google', { scope: ['profile'] }));
+
+router.get('/login/google/callback', 
+  passport.authenticate('google', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
+
 module.exports = router;

@@ -58,9 +58,9 @@ class Login extends Component {
 		const socialButtons = (
 			<div className="social-button">
 				<h3>LOGIN WITH SOCIAL NETWORK</h3>
-				<a href="/auth/login/facebook" className="btn btn-primary facebook link"><i className="fa fa-facebook-official"></i> Facebook</a>
-				<a href="" className="btn btn-primary linkedin"><i className="fa fa-linkedin"></i> Linkedin</a>
-				<a href="" className="btn btn-primary twitter"><i className="fa fa-twitter"></i> Twitter</a>
+				<a href="/auth/login/facebook" className="btn btn-primary facebook"><i className="fa fa-facebook-official"></i> Facebook</a>
+				<a href="/auth/login/google" className="btn btn-primary google"><i className="fa fa-google"></i> Google</a>
+				<a href="/auth/login/twitter" className="btn btn-primary twitter"><i className="fa fa-twitter"></i> Twitter</a>
 			</div>
 		)
 

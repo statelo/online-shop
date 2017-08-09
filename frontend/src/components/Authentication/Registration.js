@@ -95,7 +95,7 @@ class Registration extends Component {
 			<div className="social-button">
 				<h3>SIGN UP WITH SOCIAL NETWORK</h3>
 				<button type="button" className="btn btn-primary facebook"><i className="fa fa-facebook-official"></i> Facebook</button>
-				<button type="button" className="btn btn-primary linkedin"><i className="fa fa-linkedin"></i> Linkedin</button>
+				<button type="button" className="btn btn-primary google"><i className="fa fa-google"></i> Google</button>
 				<button type="button" className="btn btn-primary twitter"><i className="fa fa-twitter"></i> Twitter</button>
 			</div>
 		)

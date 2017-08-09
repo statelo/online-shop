@@ -4,16 +4,38 @@ const mongo = require('./database');
 const ObjectID = require('mongodb').ObjectID;
 const bcrypt = require('bcrypt-nodejs');
 const FacebookStrategy = require('passport-facebook').Strategy;
+const TwitterStrategy = require('passport-twitter').Strategy;
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 passport.use(new LocalStrategy(authentication));
 passport.use('local-registration', new LocalStrategy({passReqToCallback: true}, registration));
 passport.use(new FacebookStrategy({
     clientID: '210674842797146',
-    clientSecret: process.env.FACEBOOK_APP_SECRET,
+    clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
     callbackURL: "http://localhost:4001/auth/login/facebook/callback"
-  },
-  function(accessToken, refreshToken, profile, done) {
-    mongo.db.collection('users').findOne({ 
+  }, (accessToken, refreshToken, profile, done) => {
+    userWithSocialLogin(profile, done);
+  }
+));
+passport.use(new TwitterStrategy({
+    consumerKey: 'Qno702v5CCDLddEAGuZMA1f6d',
+    consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
+    callbackURL: "http://localhost:4001/auth/login/twitter/callback"
+  }, (token, tokenSecret, profile, done) => {
+    userWithSocialLogin(profile, done);
+  }
+));
+passport.use(new GoogleStrategy({
+    clientID: '389015494166-rnrjorsikm4uhlhpqp21hk87m7o2ilbf.apps.googleusercontent.com',
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: "http://localhost:4001/auth/login/google/callback"
+  }, (accessToken, refreshToken, profile, done) => {
+    userWithSocialLogin(profile,done)
+  }
+));
+
+function userWithSocialLogin(profile, done) {
+	mongo.db.collection('users').findOne({ 
 			oauth_provider: profile.provider,
 			oauth_name: profile.displayName
     }).then((user) => {
@@ -32,8 +54,7 @@ passport.use(new FacebookStrategy({
     			})
     	}
     })
-  }
-));
+}
 
 function authentication(email, password, done) {
 	mongo.db.collection('users').findOne({ 

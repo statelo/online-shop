@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar } from '../components';
 import { connect } from 'react-redux';
-import { requestLogout, requestFacebookLogin } from '../actions/authentication';
+import { requestLogout, requestSocialLogin } from '../actions/authentication';
 
 class Header extends Component {
 	constructor(props) {
@@ -24,7 +24,7 @@ class Header extends Component {
 					handleLogout={this.handleLogout}
 					history={this.props.history}
 					user={this.props.user}
-					facebookLogin={this.props.facebookLogin}
+					socialLogin={this.props.socialLogin}
 				/>
 			</div>
 		)
@@ -43,8 +43,8 @@ const mapDispatchToProps = dispatch => {
 		requestLogout: () => {
 			return dispatch(requestLogout())
 		},
-		facebookLogin: () => {
-			return dispatch(requestFacebookLogin());
+		socialLogin: () => {
+			return dispatch(requestSocialLogin());
 		}
 	}
 }

@@ -8,24 +8,24 @@ import {
 	SIGNUP,
 	SIGNUP_SUCCESS,
 	SIGNUP_FAILURE,
-	FACEBOOK_LOGIN
+	LOGIN_SOCIAL
 } from './types/authentication';
 
-export function requestFacebookLogin() {
+export function requestSocialLogin() {
 	return (dispatch) => {
 		return axios.get('/auth').then(res => {
 			if(!res.data.user) {
-				dispatch(facebookLogin(res.data.authenticated, res.data.user));
+				dispatch(socialLogin(res.data.authenticated, res.data.user));
 			} else {
-				dispatch(facebookLogin(res.data.authenticated, res.data.user.oauth_name))
+				dispatch(socialLogin(res.data.authenticated, res.data.user.oauth_name))
 			}
 		})
 	}
 }
 
-function facebookLogin(login, user) {
+function socialLogin(login, user) {
 	return {
-		type: FACEBOOK_LOGIN,
+		type: LOGIN_SOCIAL,
 		login,
 		user
 	}

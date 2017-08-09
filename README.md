@@ -1,1 +1,5 @@
 # online-shop
+
+```
+npm install
+```

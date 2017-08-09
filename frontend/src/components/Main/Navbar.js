@@ -12,7 +12,7 @@ class Navbar extends React.Component {
 		if(user) {
 			return
 		} else {
-			this.props.facebookLogin()
+			this.props.socialLogin()
 		}
 	}
 
@@ -37,10 +37,10 @@ class Navbar extends React.Component {
 					<nav className="navbar navbar-inverse">
 					  <div className="container">
 					    <div className="navbar-header">
-					      <Link className="navbar-brand" to="/">iProduction</Link>
+					      <Link className="navbar-brand" to="/">SITE NAME</Link>
 					    </div>
 					    <ul className="nav navbar-nav">
-					      <li><Link to="/blog">Blog</Link></li>
+					      <li></li>
 					    </ul>
 					    
 					    {this.props.isLoggedIn ? logoutLink : loginLink}
