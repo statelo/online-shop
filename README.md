@@ -3,8 +3,8 @@
 This project is still in development mode. Online shop is a simple
 project where some list of clothes will be displayed and some add to 
 basket, buy function, delete from basket functions will be implemented.
-In this project were used 2 main technologies: React.js for Front-End and
-Node.js for Back-End. Online shop project was developed for personal use. This site
+In this project were used 2 main technologies: **React.js for Front-End** and
+**Node.js for Back-End**. Online shop project was developed for personal use. This site
 has not been deployed, but you can download and try out this
 project. You can read about core technologies, project structure 
 and installation processes in the next section.
@@ -43,27 +43,12 @@ Following technologies were used for this project:
 
 ## Project Structure
 
-This project was splitted on 2 folders: `online-shop/backend` and `online-shop/frontend`. 
-Frontend folder was created with `create-react-app` project. Check link in technologies
+This project was splitted on 2 folders: **online-shop/backend** and **online-shop/frontend**. 
+Frontend folder was created with **create-react-app** project. Check link in technologies
 section. Backend folder Project structure can be described as following:
 
 ```
-.
-+-- _config.yml
-+-- _drafts
-|   +-- begin-with-the-crazy-ideas.textile
-|   +-- on-simplicity-in-technology.markdown
-+-- _includes
-|   +-- footer.html
-|   +-- header.html
-+-- _layouts
-|   +-- default.html
-|   +-- post.html
-+-- _posts
-|   +-- 2007-10-29-why-every-programmer-should-play-nethack.textile
-|   +-- 2009-04-26-barcamp-boston-4-roundup.textile
-+-- _data
-|   +-- members.yml
-+-- _site
-+-- index.html
+online-shop/
+	backend
+	frontend
 ```
