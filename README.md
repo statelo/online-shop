@@ -70,18 +70,18 @@ To run this project on your local machine you need:
 	- MongoDB ^3.4.6
 	- npm ^3.10.8
 2. Clone repository from GitHub.
-	```
+	```sh
 	git clone https://github.com/statelo/online-shop.git
 	cd online-shop
 	```
 3. Install dependencies in Front-End folder.
-	```
+	```sh
 	cd frontend
 	npm install or yarn install
 	cd ..
-	```
+	```sh
 4. Install dependencies in Back-End folder.
-	```
+	```sh
 	cd backend
 	npm install or yarn install
 	```
