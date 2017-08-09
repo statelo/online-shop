@@ -73,15 +73,18 @@ To run this project on your local machine you need:
 	```
 	git clone https://github.com/statelo/online-shop.git
 	cd online-shop
-		```
+	```
 3. Install dependencies in Front-End folder.
-	`cd frontend`
-	`npm install` or `yarn install`
-	`cd ..`
+	```
+	cd frontend
+	npm install or yarn install
+	cd ..
+	```
 4. Install dependencies in Back-End folder.
-	`cd backend`
-	`npm install` or `yarn install`
-
+	```
+	cd backend
+	npm install or yarn install
+	```
 This project using [concurrently](https://github.com/kimmobrunfeldt/concurrently) to run Back-End and Front-End
 servers in one time. Check out this [Using create-react-app with a server](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/) for more information.
 
