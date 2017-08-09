@@ -65,7 +65,7 @@ online-shop/
 ## Getting Started
 
 To run this project on your local machine you need:
-###### Prerequisites.
+1. Prerequisites.
 	- Node.js ^6.8.1
 	- MongoDB ^3.4.6
 	- npm ^3.10.8
