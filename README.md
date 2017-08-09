@@ -60,11 +60,11 @@ online-shop/
     public
     scripts
     src/
-    	actions
-    	components
-    	containers
-    	images
-    	reducers
+      actions
+      components
+      containers
+      images
+      reducers
 ```
 
 ## Getting Started
