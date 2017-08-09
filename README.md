@@ -6,7 +6,7 @@ basket, buy function, delete from basket functions will be implemented.
 In this project were used 2 main technologies: **React.js for Front-End** and
 **Node.js for Back-End**. Online shop project was developed for personal use. This site
 has not been deployed, but you can download and try out this
-project. You can read about core technologies, project structure 
+project. You can read about [core technologies](#Technologies Used), project structure 
 and installation processes in the next section.
 
 ## Technologies Used
