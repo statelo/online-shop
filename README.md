@@ -65,10 +65,10 @@ online-shop/
 ## Getting Started
 
 To run this project on your local machine you need:
-	1. Prerequisites.
-		* Node.js ^6.8.1
-	  * MongoDB ^3.4.6
-	  * npm ^3.10.8
+	###### Prerequisites.
+		- Node.js ^6.8.1
+	  - MongoDB ^3.4.6
+	  - npm ^3.10.8
 	2. Clone repository from GitHub.
 		```
 		git clone https://github.com/statelo/online-shop.git
