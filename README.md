@@ -48,11 +48,6 @@ Frontend folder was created with `create-react-app` project. Check link in techn
 section. Backend folder Project structure can be described as following:
 
 ```
-online-shop
-	/backend
-	/frontend
-```
-
 .
 +-- _config.yml
 +-- _drafts
@@ -71,3 +66,4 @@ online-shop
 |   +-- members.yml
 +-- _site
 +-- index.html
+```
