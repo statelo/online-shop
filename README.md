@@ -66,5 +66,5 @@ online-shop/
 
 To run this project on your local machine you need:
 > Node.js ^6.8.1
->	MongoDB ^3.4.6
-> npm ^3.10.8
+	MongoDB ^3.4.6
+	npm ^3.10.8
