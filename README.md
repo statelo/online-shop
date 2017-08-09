@@ -102,7 +102,7 @@ servers in one time. Check out this [Using create-react-app with a server](https
 	npm start
 	```
 
-### Thank You
+## Thank You
 
 If you have any questions you can email me to **statelo1992@gmail.com**
 
