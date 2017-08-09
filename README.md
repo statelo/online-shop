@@ -9,6 +9,9 @@ has not been deployed, but you can download and try out this
 project. You can read about core technologies, project structure 
 and installation processes in the next sections.
 
+**Note: This instructions must completely work on UNIX (macOS, Linux). Instructions
+for Windows OS will be applied soon**
+
 ## Technologies Used
 
 Following technologies were used for this project:
@@ -47,8 +50,6 @@ This project was splitted on 2 folders: **online-shop/backend** and **online-sho
 Frontend folder was created with **create-react-app** project. Check link in technologies
 section. Backend folder just using **server.js** as main file. 
 
-**Note: Front-End folder was ejected with `npm run eject` command. Check out create-react-app repository**
-
 Project structure can be described as following:
 
 ```
@@ -67,6 +68,8 @@ online-shop/
       reducers
 ```
 
+**Note: Front-End folder was ejected with `npm run eject` command. Check out create-react-app repository**
+
 ## Getting Started
 
 To run this project on your local machine you need:
@@ -84,23 +87,25 @@ To run this project on your local machine you need:
 	```sh
 	cd online-shop
 	cd frontend
-	npm install OR yarn install
+	npm install / yarn install
 	cd ..
 	```
 
 4. Install dependencies in Back-End folder.
 	```sh
 	cd backend
-	npm install OR yarn install
+	npm install / yarn install
 	```
 
 This project using [concurrently](https://github.com/kimmobrunfeldt/concurrently) to run Back-End and Front-End
 servers in one time. Check out this [Using create-react-app with a server](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/) for more information.
 
-5. Run Front-End and Back-End servers (**NOTE: You must be in Back-End Folder**).
+5. Run Front-End and Back-End servers.
 	```sh
 	npm start
 	```
+
+**Note: You must be in Back-End Folder**
 
 ## Thank You
 
