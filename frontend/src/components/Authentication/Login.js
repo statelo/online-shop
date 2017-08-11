@@ -36,6 +36,7 @@ class Login extends Component {
 						name="username"
 						value={this.state.username}
 						onChange={this.handleChange}
+						className="form-control"
 					/>
 				</div>
 
@@ -46,6 +47,7 @@ class Login extends Component {
 						name="password"
 						value={this.state.password}
 						onChange={this.handleChange}
+						className="form-control"
 					/>
 				</div>
 
@@ -93,7 +95,7 @@ class Login extends Component {
 			<div className="Login-authentication">
 				{this.props.login_status === "FAILURE" && failureAlert}
 				<div className="header">
-					<a href="/" className="home-link"><h1>iProduction</h1></a>
+					<a href="/" className="home-link"><h1>ONLINE SHOP</h1></a>
 				</div>
 
 				{loginView}

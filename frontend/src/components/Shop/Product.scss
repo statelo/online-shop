@@ -1,0 +1,23 @@
+.Product {
+	background-color: #984B43;
+	border-radius: 10px;
+	padding: 0;
+	width: 22%;
+	margin-left: 37px;
+	margin-bottom: 20px;
+	float: left;
+
+	img {
+		width: 100%;
+	}
+
+	.Product-description {
+		color: #eac67a;
+		padding: 10px 0;
+
+		p {
+			padding: 0;
+			margin: 0;
+		}
+	}
+}

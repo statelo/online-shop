@@ -1,0 +1,37 @@
+.Gender {
+	text-align: center;
+
+	.Gender-male {
+		font-size: 80px;
+		display: inline-block;
+		margin: 0;
+		border: none;
+		color: white;
+		float: left;
+		padding: 400px 0;
+		height: 100vh;
+		background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../images/male-background.jpg');
+		background-size: cover;
+
+		&:hover {
+			background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('../../images/male-background.jpg');
+			background-size: cover;
+		}
+	}
+
+	.Gender-female {
+		font-size: 80px;
+		display: inline-block;
+		border: none;
+		color: white;
+		padding: 400px 0;
+		height: 100vh;
+		background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../images/female-background.jpg');
+		background-size: cover;
+
+		&:hover {
+			background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('../../images/female-background.jpg');
+			background-size: cover;
+		}
+	}
+}

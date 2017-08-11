@@ -1,0 +1,51 @@
+.Navbar {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../images/background-1.jpg');
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  padding: 300px 0;
+
+  .Navbar-logo {
+    font-size: 100px;
+    text-decoration: none;
+    color: #fff9db;
+    font-style: italic;
+    display: inline;
+  }
+
+  .Navbar-authentication {
+    .Navbar-greetings {
+      display: block;
+      font-size: 30px;
+    }
+
+    .Navbar-link {
+      text-decoration: none;
+      display: inline-block;
+      margin: 5px;
+
+      .Navbar-button {
+        border: solid 1px #fff9db;
+        font-size: 25px;
+        width: 150px;
+        color: #fff9db;
+        font-style: italic;
+        height: 50px;
+        margin: 0 auto;
+        padding: 5px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+
+        &:hover {
+          background-color: #fff9db;
+          color: #6a5750;
+        }
+      }
+    }
+
+    span {
+      color: #fff9db;
+      font-style: italic;
+    }
+  }
+}

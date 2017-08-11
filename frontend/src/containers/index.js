@@ -1,7 +1,9 @@
-import Header from './Header';
+import Home from './Home';
 import Authentication from './Authentication';
+import Shop from './Shop';
 
 export {
-	Header,
+	Home,
+	Shop,
 	Authentication
 }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Navbar } from '../components';
+import { Navbar, Body } from '../components';
 import { connect } from 'react-redux';
 import { requestLogout, requestSocialLogin } from '../actions/authentication';
 
-class Header extends Component {
+class Home extends Component {
 	constructor(props) {
 		super(props);
 
@@ -26,6 +26,7 @@ class Header extends Component {
 					user={this.props.user}
 					socialLogin={this.props.socialLogin}
 				/>
+				<Body/>
 			</div>
 		)
 	}
@@ -49,6 +50,6 @@ const mapDispatchToProps = dispatch => {
 	}
 }
 
-Header = connect(mapStateToProps, mapDispatchToProps)(Header);
+Home = connect(mapStateToProps, mapDispatchToProps)(Home);
 
-export default Header;
+export default Home;

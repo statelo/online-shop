@@ -1,0 +1,35 @@
+.Sidebar {
+	height: 100vh;
+	background-color: #233237;
+	position: fixed;
+	left: 0;
+
+	.Sidebar-checkbox {
+		height: 220px;
+
+		hr {
+			width: 100%;
+		}
+
+		h3 {
+			float: left;
+			color: white;
+			font-style: italic;
+		}
+
+		label {
+			color: white;
+			float: left;
+			clear: both;
+			padding-left: 10px;
+			display: block;
+			margin: 0;
+			font-size: 20px;
+
+			input {
+				position: relative;
+				top: -3px;
+			}
+		}
+	}
+}

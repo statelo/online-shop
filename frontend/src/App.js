@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Authentication } from './containers';
+import { Home, Authentication, Shop } from './containers';
 import { Switch, Route } from 'react-router-dom';
 import './App.scss';
 
@@ -10,11 +10,15 @@ class App extends Component {
       	<Switch>
 	        <Route 
             exact path='/'
-            component={Header}
+            component={Home}
           />
 	        <Route
             path='/auth'
             component={Authentication}
+          />
+          <Route
+            path='/shop'
+            component={Shop}
           />
       	</Switch>
       </div>

@@ -1,0 +1,22 @@
+.Content {
+	background-color: #18121e;
+	position: absolute;
+	right: 0;
+	padding: 0;
+	text-align: center;
+	min-height: 100vh;
+
+	.Content-home {
+		margin-bottom: 20px;
+
+		.Content-link {
+			color: white;
+			text-decoration: none;
+			font-style: italic;
+
+			&:hover {
+				color: #eac67a;
+			}
+		}	
+	}
+}
