@@ -4,7 +4,63 @@
 	position: fixed;
 	left: 0;
 
-	.Sidebar-checkbox {
+	.Sidebar-products {
+		height: 220px;
+
+		hr {
+			width: 100%;
+		}
+
+		h3 {
+			float: left;
+			color: white;
+			font-style: italic;
+		}
+
+		label {
+			color: white;
+			float: left;
+			clear: both;
+			padding-left: 10px;
+			display: block;
+			margin: 0;
+			font-size: 20px;
+
+			input {
+				position: relative;
+				top: -3px;
+			}
+		}
+	}
+	.Sidebar-sizes {
+		height: 250px;
+
+		hr {
+			width: 100%;
+		}
+
+		h3 {
+			float: left;
+			color: white;
+			font-style: italic;
+		}
+
+		label {
+			color: white;
+			float: left;
+			clear: both;
+			padding-left: 10px;
+			display: block;
+			margin: 0;
+			font-size: 20px;
+
+			input {
+				position: relative;
+				top: -3px;
+			}
+		}
+	}
+	.Sidebar-brands {
 		height: 220px;
 
 		hr {
