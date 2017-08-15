@@ -11,15 +11,23 @@ class Male extends React.Component {
 			shirts: false,
 			official: false,
 			bags: false,
-			accessories: false
+			accessories: false,
+			product_name: ''
 		}
 
-		this.handleChange = this.handleChange.bind(this);
+		this.handleSearch = this.handleSearch.bind(this);
+		this.handleFilter = this.handleFilter.bind(this);
 	}
 
-	handleChange(e) {
+	handleFilter(e) {
 		this.setState({
 			[e.target.name]: !this.state[e.target.name]
+		})
+	}
+
+	handleSearch(e) {
+		this.setState({
+			[e.target.name]: e.target.value
 		})
 	}
 
@@ -40,12 +48,15 @@ class Male extends React.Component {
 					official='Suits'
 					bags='Bags'
 					accessories='Accessories'
-					handleChange={this.handleChange}
+					handleFilter={this.handleFilter}
 					jeansVisibility={this.state.jeans}
 					shirtsVisibility={this.state.shirts}
 					officialVisibility={this.state.official}
 					bagsVisibility={this.state.bags}
 					accessoriesVisibility={this.state.accessories}
+					product_name={this.state.product_name}
+					handleSearch={this.handleSearch}
+
 				/>
 				<Content
 					bags={men_bags}

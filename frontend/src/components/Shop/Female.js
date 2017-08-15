@@ -11,15 +11,23 @@ class Female extends React.Component {
 			shirts: false,
 			official: false,
 			bags: false,
-			accessories: false
+			accessories: false,
+			product_name: ''
 		}
 
-		this.handleChange = this.handleChange.bind(this);
+		this.handleFilter = this.handleFilter.bind(this);
+		this.handleSearch = this.handleSearch.bind(this);
 	}
 
-	handleChange(e) {
+	handleFilter(e) {
 		this.setState({
 			[e.target.name]: !this.state[e.target.name]
+		})
+	}
+
+	handleSearch(e) {
+		this.setState({
+			[e.target.name]: e.target.value
 		})
 	}
 
@@ -40,12 +48,14 @@ class Female extends React.Component {
 					official='Dresses'
 					bags='Bags'
 					accessories='Accessories'
-					handleChange={this.handleChange}
+					handleFilter={this.handleFilter}
+					handleSearch={this.handleSearch}
 					jeansVisibility={this.state.jeans}
 					shirtsVisibility={this.state.shirts}
 					officialVisibility={this.state.official}
 					bagsVisibility={this.state.bags}
 					accessoriesVisibility={this.state.accessories}
+					product_name={this.state.product_name}
 				/>
 				<Content
 					bags={women_bags}
@@ -53,7 +63,6 @@ class Female extends React.Component {
 					jeans={women_jeans}
 					shirts={women_shirts}
 					accessories={women_accessories}
-					handleChange={this.handleChange}
 					jeansVisibility={this.state.jeans}
 					shirtsVisibility={this.state.shirts}
 					officialVisibility={this.state.official}

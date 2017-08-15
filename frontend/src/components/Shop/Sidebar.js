@@ -4,6 +4,16 @@ import './Sidebar.scss';
 const Sidebar = (props) => {
 	return(
 		<div className="Sidebar col-sm-2">
+			<div className="Sidebar-search">
+				<input
+					type="text"
+					name="product_name"
+					placeholder="Search..."
+					className="form-control"
+					value={props.product_name}
+					onChange={props.handleSearch}
+				/>
+			</div>
 			<div className="Sidebar-products">
 				<h3>PRODUCTS</h3>
 				<hr/>
@@ -12,8 +22,7 @@ const Sidebar = (props) => {
 						type="checkbox" 
 						checked={props.jeansVisibility}
 						name="jeans"
-						value="jeans"
-						onChange={props.handleChange}
+						onChange={props.handleFilter}
 					/>
 					{' '}
 					{props.jeans}
@@ -22,9 +31,8 @@ const Sidebar = (props) => {
 					<input 
 						type="checkbox" 
 						checked={props.shirtsVisibility} 
-						name="shirts" 
-						value="shirts"
-						onChange={props.handleChange}
+						name="shirts"
+						onChange={props.handleFilter}
 					/>
 					{' '}
 					{props.shirts}
@@ -33,9 +41,8 @@ const Sidebar = (props) => {
 					<input 
 						type="checkbox" 
 						checked={props.officialVisibility} 
-						name="official" 
-						value="official"
-						onChange={props.handleChange}
+						name="official"
+						onChange={props.handleFilter}
 					/>
 					{' '}
 					{props.official}
@@ -44,9 +51,8 @@ const Sidebar = (props) => {
 					<input 
 						type="checkbox" 
 						checked={props.bagsVisibility} 
-						name="bags" 
-						value="bags"
-						onChange={props.handleChange}
+						name="bags"
+						onChange={props.handleFilter}
 					/>
 					{' '}
 					{props.bags}
@@ -55,9 +61,8 @@ const Sidebar = (props) => {
 					<input 
 						type="checkbox" 
 						checked={props.accessoriesVisibility} 
-						name="accessories" 
-						value="accessories"
-						onChange={props.handleChange}
+						name="accessories"
+						onChange={props.handleFilter}
 					/>
 					{' '}
 					{props.accessories}

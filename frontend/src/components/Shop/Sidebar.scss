@@ -4,6 +4,15 @@
 	position: fixed;
 	left: 0;
 
+	.Sidebar-search {
+		margin-top: 20px;
+
+		input {
+			width: 100%;
+			font-size: 15px;
+		}
+	}
+
 	.Sidebar-products {
 		height: 220px;
 
@@ -32,6 +41,7 @@
 			}
 		}
 	}
+
 	.Sidebar-sizes {
 		height: 250px;
 
@@ -60,6 +70,7 @@
 			}
 		}
 	}
+
 	.Sidebar-brands {
 		height: 220px;
 
