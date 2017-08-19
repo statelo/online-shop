@@ -25,6 +25,7 @@ class Shop extends React.Component {
 
 export default Shop;
 
+// Shop data
 const women_accessories = [
 	{
 		id: 1,
