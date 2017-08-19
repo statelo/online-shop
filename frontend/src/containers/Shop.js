@@ -23,6 +23,8 @@ class Shop extends React.Component {
 	}
 }
 
+export default Shop;
+
 const women_accessories = [
 	{
 		id: 1,
@@ -652,5 +654,3 @@ const women_bags = [
     image_src: "https://images.asos-media.com/products/south-beach-pink-grapefruit-beach-bag/8068052-1-multi?$XL$"
 	}
 ]
-
-export default Shop;
