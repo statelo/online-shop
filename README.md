@@ -98,12 +98,11 @@ To run this project on your local machine you need:
 	```
 
 5. Run Front-End and Back-End servers.
-
-**Note: To make this project run you have to run scipts for Back-End and Front-End folders separately.**
-
 	```sh
 	npm start
 	```
+
+**Note: To make this project run you have to run scipts for Back-End and Front-End folders separately.**
 
 ## Thank You
 
