@@ -102,7 +102,7 @@ To run this project on your local machine you need:
 	npm start
 	```
 
-**Note - 1: To make this project run you have to run scipts for Back-End and Front-End folders separately.**<br>
+**Note - 1: To make this project run you have to run scipts for Back-End and Front-End folders separately.**<br><br>
 **Note - 2: You can change social login secrets with yours in `online-shop/backend/passport.js` to make social login completely works. Usually secrets must not be shown to other people, you must enter them through `EX: process.env.FACEBOOK_LOGIN_SECRET`, but it is okay for this project.**
 
 ## Thank You
