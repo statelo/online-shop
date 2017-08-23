@@ -11,7 +11,7 @@ passport.use(new LocalStrategy(authentication));
 passport.use('local-registration', new LocalStrategy({passReqToCallback: true}, registration));
 passport.use(new FacebookStrategy({
     clientID: '210674842797146',
-    clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+    clientSecret: 'e457347144dd0160cd0994b924dd6d25',
     callbackURL: "http://localhost:4001/auth/login/facebook/callback"
   }, (accessToken, refreshToken, profile, done) => {
     userWithSocialLogin(profile, done);
@@ -19,7 +19,7 @@ passport.use(new FacebookStrategy({
 ));
 passport.use(new TwitterStrategy({
     consumerKey: 'Qno702v5CCDLddEAGuZMA1f6d',
-    consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
+    consumerSecret: '6S5r5HAIsrTmlCTWaBcxmNDC3yiz35WDQytuq64OCYzPTCMDvl',
     callbackURL: "http://localhost:4001/auth/login/twitter/callback"
   }, (token, tokenSecret, profile, done) => {
     userWithSocialLogin(profile, done);
@@ -27,7 +27,7 @@ passport.use(new TwitterStrategy({
 ));
 passport.use(new GoogleStrategy({
     clientID: '389015494166-rnrjorsikm4uhlhpqp21hk87m7o2ilbf.apps.googleusercontent.com',
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    clientSecret: 'JPc3qiUECDhLQynJyA6aF3zo',
     callbackURL: "http://localhost:4001/auth/login/google/callback"
   }, (accessToken, refreshToken, profile, done) => {
     userWithSocialLogin(profile,done)
